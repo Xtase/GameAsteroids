@@ -36,6 +36,24 @@ task dist(type: Jar) {
     with jar
 }
 
+//val jar by tasks.getting(Jar::class) {
+//    manifest {
+//        attributes["Main-Class"] = project.mainClassName
+//    }
+//    exclude("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA")
+//    from(sourceSets.main.get().output) {
+//        include("**/DesktopLauncher.class")
+//    }
+//    dependsOn(configurations.runtimeClasspath)
+//    from({
+//        configurations.runtimeClasspath.get().filter {
+//            it.name.endsWith("jar")
+//        }.map {
+//            zipTree(it)
+//        }
+//    })
+//}
+
 
 dist.dependsOn classes
 

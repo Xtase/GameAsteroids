@@ -26,7 +26,7 @@ gretty.contextPath = "/"
 gretty.portPropertiesFileName = "TEMP_PORTS.properties"
 
 task startHttpServer () {
-    dependsOn draftCompileGwt
+   dependsOn draftCompileGwt
 
     doFirst {
         copy {
